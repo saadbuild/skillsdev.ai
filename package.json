@@ -1,0 +1,18 @@
+{
+  "name": "skillsdev-ai",
+  "version": "2.0.0",
+  "description": "skillsdev.ai — Freelance Skills, Languages & Tools Roadmap platform with an AI agent (SkillBot), full Express backend, and an Aurora-themed frontend.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "license": "MIT"
+}

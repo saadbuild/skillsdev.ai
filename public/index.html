@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>skillsdev.ai — Freelance Skills, Languages & Tools Roadmaps</title>
+<meta name="description" content="Explore freelance skills, programming languages and tools through interactive roadmap diagrams, plain-language explanations, and SkillBot — a built-in AI agent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="aurora-field">
+  <div class="aurora-blob b1"></div>
+  <div class="aurora-blob b2"></div>
+  <div class="aurora-blob b3"></div>
+  <div class="aurora-blob b4"></div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#/" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="20,2 35,11 35,29 20,38 5,29 5,11" stroke="url(#lg1)" stroke-width="2" fill="rgba(139,107,255,0.1)"/>
+        <circle cx="20" cy="12" r="3" fill="#8b6bff"/>
+        <circle cx="12" cy="26" r="3" fill="#34e0c2"/>
+        <circle cx="28" cy="26" r="3" fill="#ffc15e"/>
+        <line x1="20" y1="12" x2="12" y2="26" stroke="#8b6bff" stroke-width="1.5"/>
+        <line x1="20" y1="12" x2="28" y2="26" stroke="#8b6bff" stroke-width="1.5"/>
+        <line x1="12" y1="26" x2="28" y2="26" stroke="#34e0c2" stroke-width="1.5"/>
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#8b6bff"/><stop offset="1" stop-color="#34e0c2"/></linearGradient></defs>
+      </svg>
+      <span class="logo-word">skills<span class="dot-ai">dev.ai</span></span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#/" class="nav-item" data-route="/">Home</a>
+      <a href="#/browse/skills" class="nav-item" data-route="/browse/skills">Skills</a>
+      <a href="#/browse/languages" class="nav-item" data-route="/browse/languages">Languages</a>
+      <a href="#/browse/tools" class="nav-item" data-route="/browse/tools">Tools</a>
+      <a href="#/find-path" class="nav-item" data-route="/find-path">Find My Path</a>
+      <a href="#/help" class="nav-item" data-route="/help">Help</a>
+    </div>
+
+    <div class="nav-search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search skills, languages, tools…" autocomplete="off">
+    </div>
+    <div class="glass search-results" id="searchResults"></div>
+
+    <button class="nav-burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="nav-search nav-search-mobile">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="searchInputMobile" placeholder="Search skills, languages, tools…" autocomplete="off">
+  </div>
+  <div class="glass search-results" id="searchResultsMobile"></div>
+  <a href="#/" class="nav-item" data-route="/">Home</a>
+  <a href="#/browse/skills" class="nav-item" data-route="/browse/skills">Skills</a>
+  <a href="#/browse/languages" class="nav-item" data-route="/browse/languages">Languages</a>
+  <a href="#/browse/tools" class="nav-item" data-route="/browse/tools">Tools</a>
+  <a href="#/find-path" class="nav-item" data-route="/find-path">Find My Path</a>
+  <a href="#/help" class="nav-item" data-route="/help">Help</a>
+</div>
+
+<main id="app">
+
+  <!-- ============================================================ HOME ============================================================ -->
+  <section class="view active" id="view-home" data-view="/">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="hero-greeting">👋 Hey, future freelancer.</span>
+          <h1>Every freelance career starts at <span class="grad">node one.</span></h1>
+          <p class="lead">skillsdev.ai maps out freelancing the way it actually works: pick a skill, a programming language, or a tool, and follow a connected roadmap — as a flowchart or a step list — from complete beginner to first paid client. SkillBot, a built-in AI agent, is on hand whenever you're stuck.</p>
+          <div class="hero-ctas">
+            <a href="#/browse/skills" class="btn btn-primary">Explore Skills →</a>
+            <a href="#/find-path" class="btn btn-ghost">Find My Path</a>
+          </div>
+          <div class="hero-stats" id="heroStats">
+            <div class="hero-stat"><b>—</b><span>Guided roadmaps</span></div>
+            <div class="hero-stat"><b>—</b><span>Topics explained</span></div>
+            <div class="hero-stat"><b>24/7</b><span>SkillBot AI agent</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" id="heroVisual"></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Three ways in</span>
+          <h2>Pick where you want to start</h2>
+        </div>
+      </div>
+      <div class="item-grid" id="homeCategoryCards"></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">How it works</span>
+          <h2>From "what is this" to first client</h2>
+        </div>
+      </div>
+      <div class="item-grid">
+        <div class="glass item-card" style="cursor:default">
+          <div class="badge" style="background:rgba(139,107,255,.16);color:var(--skills-a)">01</div>
+          <h3>Pick a path</h3>
+          <p>Choose a freelance skill, a programming language, or a tool from the full catalogue.</p>
+        </div>
+        <div class="glass item-card" style="cursor:default">
+          <div class="badge" style="background:rgba(52,224,194,.16);color:var(--languages-a)">02</div>
+          <h3>Follow the roadmap</h3>
+          <p>See it as a flowchart of connected stages, or a plain step-by-step list — your choice.</p>
+        </div>
+        <div class="glass item-card" style="cursor:default">
+          <div class="badge" style="background:rgba(255,193,94,.16);color:var(--tools-a)">03</div>
+          <h3>Open any topic</h3>
+          <p>Every node expands into what it is, how to learn it, where it's used, and the tools involved.</p>
+        </div>
+        <div class="glass item-card" style="cursor:default">
+          <div class="badge" style="background:rgba(255,110,201,.16);color:var(--aurora-magenta)">04</div>
+          <h3>Ask SkillBot</h3>
+          <p>Stuck on a term or unsure what to learn first? The AI agent answers from the same knowledge base.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============================================================ BROWSE (skills / languages / tools) ============================================================ -->
+  <section class="view" id="view-browse" data-view="/browse">
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" id="browseEyebrow">Catalogue</span>
+          <h2 id="browseTitle">Skills</h2>
+          <p id="browseDesc">Pick one to open its full roadmap.</p>
+        </div>
+      </div>
+      <div class="cat-tabs" id="catTabs">
+        <button class="cat-tab" data-cat="skills">Skills</button>
+        <button class="cat-tab" data-cat="languages">Languages</button>
+        <button class="cat-tab" data-cat="tools">Tools</button>
+      </div>
+      <div class="item-grid" id="browseGrid">
+        <div class="loading-row"><span class="spin"></span> Loading catalogue…</div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============================================================ ROADMAP ============================================================ -->
+  <section class="view" id="view-roadmap" data-view="/roadmap">
+    <section class="section container">
+      <div class="roadmap-header">
+        <div class="badge-lg" id="rmBadge">—</div>
+        <div class="roadmap-title-wrap">
+          <span class="eyebrow" id="rmEyebrow">Roadmap</span>
+          <h2 id="rmTitle">Loading…</h2>
+          <p id="rmSummary"></p>
+        </div>
+        <div class="view-toggle">
+          <button class="active" data-mode="flow">Flowchart</button>
+          <button data-mode="steps">Step list</button>
+        </div>
+      </div>
+      <div class="progress-wrap">
+        <span>Progress</span>
+        <div class="progress-track"><div class="progress-fill" id="rmProgressFill" style="width:0%"></div></div>
+        <span id="rmProgressLabel">0%</span>
+      </div>
+      <div id="rmContent">
+        <div class="loading-row"><span class="spin"></span> Building roadmap…</div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============================================================ FIND MY PATH ============================================================ -->
+  <section class="view" id="view-find-path" data-view="/find-path">
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Personalised suggestion</span>
+          <h2>Find My Path</h2>
+          <p>Select whatever interests you — SkillBot's recommendation engine will suggest a skill, a language, and a tool to start with.</p>
+        </div>
+      </div>
+      <div class="glass find-path-card">
+        <h4 class="find-path-label">What sounds like you? (pick one or more)</h4>
+        <div class="interest-grid" id="interestGrid"></div>
+        <button class="btn btn-primary" id="findPathBtn">Suggest my path →</button>
+      </div>
+      <div class="result-grid" id="findPathResults"></div>
+    </section>
+  </section>
+
+  <!-- ============================================================ HELP ============================================================ -->
+  <section class="view" id="view-help" data-view="/help">
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Help</span>
+          <h2>How skillsdev.ai works</h2>
+          <p>A few common questions — or just ask SkillBot in the chat bubble.</p>
+        </div>
+      </div>
+      <div id="faqList"></div>
+      <div class="glass help-cta-card">
+        <h4 style="margin-bottom:8px">Still stuck?</h4>
+        <p style="margin-bottom:0">Reach the skillsdev.ai team at <a href="mailto:saaadi9056@gmail.com" style="color:var(--aurora-teal)">saaadi9056@gmail.com</a>, or open SkillBot with the bubble in the bottom-right corner.</p>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<!-- ============================================================ TOPIC DETAIL DRAWER ============================================================ -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="topicDrawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
+  <span class="drawer-eyebrow" id="drawerEyebrow">Roadmap topic</span>
+  <h3 id="drawerTitle">—</h3>
+  <div class="drawer-block drawer-block-easy"><h5>💬 In Easy Words</h5><p id="drawerEasy"></p></div>
+  <div class="drawer-block"><h5>What it is</h5><p id="drawerWhat"></p></div>
+  <div class="drawer-block"><h5>How to approach it</h5><p id="drawerHow"></p></div>
+  <div class="drawer-block"><h5>Where it's used</h5><p id="drawerUsed"></p></div>
+  <div class="drawer-block"><h5>Related tools</h5><div class="drawer-tools" id="drawerTools"></div></div>
+  <label class="drawer-learned">
+    <input type="checkbox" id="drawerLearnedCheckbox">
+    <span>Mark this topic as learned</span>
+  </label>
+</aside>
+
+<!-- ============================================================ AI AGENT — SkillBot ============================================================ -->
+<button class="chat-fab" id="chatFab" aria-label="Open SkillBot AI agent">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#070914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<section class="chat-panel glass" id="chatPanel">
+  <div class="chat-head">
+    <span class="dot"></span>
+    <div>
+      <strong>SkillBot</strong>
+      <span id="chatModeLabel">AI agent · local knowledge base</span>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-suggestions" id="chatSuggestions"></div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask about any skill, language, or tool…">
+    <button class="chat-send" id="chatSend" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#070914" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-col">
+      <a href="#/" class="logo"><span class="logo-word">skills<span class="dot-ai">dev.ai</span></span></a>
+      <p style="max-width:280px;margin-top:12px">Roadmaps for freelance skills, programming languages, and tools — with an AI agent built in.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <a href="#/browse/skills">Skills</a>
+      <a href="#/browse/languages">Languages</a>
+      <a href="#/browse/tools">Tools</a>
+    </div>
+    <div class="footer-col">
+      <h5>Guidance</h5>
+      <a href="#/find-path">Find My Path</a>
+      <a href="#/help">Help</a>
+      <a href="#" id="footerChatLink">Ask SkillBot</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="mailto:saaadi9056@gmail.com">saaadi9056@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="footerYear"></span> skillsdev.ai — built for people learning to freelance.</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/flowchart.js"></script>
+<script src="js/views.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
