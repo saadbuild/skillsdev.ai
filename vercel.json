@@ -1,0 +1,11 @@
+// Only bind to a port when run directly (local dev / `npm start`).
+// On Vercel, this file is imported as a serverless function instead,
+// so app.listen() must never be called there.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n  skillsdev.ai server running:  http://localhost:${PORT}`);
+    console.log(`  AI agent mode: ${process.env.ANTHROPIC_API_KEY ? "LLM + local knowledge base" : "local knowledge base only (set ANTHROPIC_API_KEY in .env to enable full LLM answers)"}\n`);
+  });
+}
+
+module.exports = app;
